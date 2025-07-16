@@ -1,0 +1,1 @@
+I:\NDA\Tektonux\BattleSimulator\battlesimulator.client\obj\Debug\transformerbattlesimulator.client.esproj.CoreCompileInputs.cache

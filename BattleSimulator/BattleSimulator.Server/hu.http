@@ -1,0 +1,32 @@
+@BattleSimulator.Server_HostAddress = http://localhost:5144
+
+GET {{BattleSimulator.Server_HostAddress}}/battlesimulator/GetBattlers
+Accept: application/json
+
+###
+
+POST {{BattleSimulator.Server_HostAddress}}/battlesimulator/UpdateBattlers
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+{ 
+    BatName: 1,
+    slot: 1,
+}
+
+
+###
+
+GET {{BattleSimulator.Server_HostAddress}}/battlesimulator/Battle
+Accept: application/json
+
+###
+
+POST {{BattleSimulator.Server_HostAddress}}/battlesimulator/ResetBattlerSlot
+Accept: application/json
+Content-Type: application/json
+{
+    "1"
+}
+
+
+###

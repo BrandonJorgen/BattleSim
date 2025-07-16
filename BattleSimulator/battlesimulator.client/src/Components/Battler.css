@@ -1,0 +1,11 @@
+.battler {
+    display:grid;
+}
+
+.battler-img {
+    display:block;
+    height: 250px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,10 @@
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.exe
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\appsettings.Development.json
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\appsettings.json
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.dll
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.deps.json
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.runtimeconfig.json
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.pdb
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.SpaProxy.dll
+I:\NDA\Tektonux\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\Microsoft.OpenApi.dll

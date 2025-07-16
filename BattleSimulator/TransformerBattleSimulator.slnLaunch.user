@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "battlesimulator.client\\transformerbattlesimulator.client.esproj",
+        "Action": "Start",
+        "DebugTarget": "localhost (Chrome)"
+      },
+      {
+        "Path": "BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

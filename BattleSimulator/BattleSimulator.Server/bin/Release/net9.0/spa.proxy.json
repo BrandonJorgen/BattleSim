@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:53350",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulator.Server\\..\\battlesimulator.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
