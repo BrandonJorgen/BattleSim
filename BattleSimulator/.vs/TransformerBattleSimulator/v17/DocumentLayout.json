@@ -98,7 +98,8 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Battler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T20:25:25.118Z"
+              "WhenOpened": "2025-07-03T20:25:25.118Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -182,7 +183,8 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Transformer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T22:02:46.267Z"
+              "WhenOpened": "2025-07-02T22:02:46.267Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -240,7 +242,7 @@
               "RelativeDocumentMoniker": "battlesimulator.client\\src\\App.tsx",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\App.tsx",
               "RelativeToolTip": "battlesimulator.client\\src\\App.tsx",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAkwJUAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAkwGEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-06-30T00:02:06.223Z",
               "EditorCaption": ""
@@ -255,7 +257,8 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\BattleSimulator.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAIwBUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T00:11:01.052Z"
+              "WhenOpened": "2025-07-03T00:11:01.052Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -267,7 +270,8 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Repository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T00:57:30.972Z"
+              "WhenOpened": "2025-07-03T00:57:30.972Z",
+              "EditorCaption": ""
             }
           ]
         }
