@@ -7,7 +7,7 @@
   "type": "chrome",
   "request": "launch",
   "url": "https://localhost:53350",
-  "webRoot": "I:\\NDA\\Tektonux\\BattleSimulator\\battlesimulator.client"
+  "webRoot": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client"
 }</LaunchJsonTarget>
   </PropertyGroup>
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransformerBattleSimulatorTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+711aecc5e0510ca5dd980935cb91615170385abe")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransformerBattleSimulatorTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransformerBattleSimulatorTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

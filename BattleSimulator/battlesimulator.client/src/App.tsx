@@ -63,6 +63,8 @@ function App() {
         console.log(event.target.value)
         if (event.target.value == "Select your Battler") {
             ResetBattlerSlot(0);
+            setBattlerOneIndex(-1);
+            setBattlerOneValue(event.target.value);
         } else {
             for (let i = 0; i <= battlers.length - 1; i++) {
                 if (usableBattlers[i].name == event.target.value) {
@@ -79,11 +81,13 @@ function App() {
         if (battlerOne != null) {
             UpdateBattlerOneChoice();
         }
-    }, [battlerOne, battlerOneValue]);
+    }, [battlerOne]);
 
     const HandleSelectBattlerTwo = (event: React.ChangeEvent<HTMLSelectElement>) => {
         if (event.target.value == "Select your Battler") {
             ResetBattlerSlot(1);
+            setBattlerTwoIndex(-1);
+            setBattlerTwoValue(event.target.value);
         } else {
             for (let i = 0; i <= battlers.length - 1; i++) {
                 if (usableBattlers[i].name == event.target.value) {
@@ -99,11 +103,13 @@ function App() {
         if (battlerTwo != null) {
             UpdateBattlerTwoChoice();
         }
-    }, [battlerTwo, battlerTwoValue]);
+    }, [battlerTwo]);
 
     const HandleSelectBattlerThree = (event: React.ChangeEvent<HTMLSelectElement>) => {
         if (event.target.value == "Select your Battler") {
             ResetBattlerSlot(2);
+            setBattlerThreeIndex(-1);
+            setBattlerThreeValue(event.target.value);
         } else {
             for (let i = 0; i <= battlers.length - 1; i++) {
                 if (usableBattlers[i].name == event.target.value) {
@@ -119,11 +125,13 @@ function App() {
         if (battlerThree != null) {
             UpdateBattlerThreeChoice();
         }
-    }, [battlerThree, battlerThreeValue]);
+    }, [battlerThree]);
 
     const HandleSelectBattlerFour = (event: React.ChangeEvent<HTMLSelectElement>) => {
         if (event.target.value == "Select your Battler") {
             ResetBattlerSlot(3);
+            setBattlerFourIndex(-1);
+            setBattlerFourValue(event.target.value);
         } else {
             for (let i = 0; i <= battlers.length - 1; i++) {
                 if (usableBattlers[i].name == event.target.value) {
@@ -139,7 +147,7 @@ function App() {
         if (battlerFour != null) {
             UpdateBattlerFourChoice();
         }
-    }, [battlerFour, battlerFourValue]);
+    }, [battlerFour]);
 
     async function UpdateBattlerOneChoice() {
         await fetch(`battlesimulator/UpdateBattlerOne`, {
@@ -237,7 +245,7 @@ function App() {
             {battleType == "1v1" ? (
                 <div className="battler-grid onevone">
                     <select className="battler-select left" onChange={HandleSelectBattlerOne} value={battlerOneValue}>
-                        <option>Select your Battler</option>
+                        <option value="Select your Battler">Select your Battler</option>
                         {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
                     </select>
                     {usableBattlers[battlerOneIndex] != null ? (<Battler name={usableBattlers[battlerOneIndex].name} faction={usableBattlers[battlerOneIndex].faction} winloss={usableBattlers[battlerOneIndex].win + "-" + usableBattlers[battlerOneIndex].loss} image={usableBattlers[battlerOneIndex].image} battlerClassName={"left"}></Battler>) : <img className="default-img left-one" src=".\Images\transformericon.jpg"></img>}

@@ -1774,11 +1774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulatorTests\\TransformerBattleSimulatorTests.csproj",
+      "projectUniqueName": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulatorTests\\TransformerBattleSimulatorTests.csproj",
       "projectName": "TransformerBattleSimulatorTests",
-      "projectPath": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulatorTests\\TransformerBattleSimulatorTests.csproj",
+      "projectPath": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulatorTests\\TransformerBattleSimulatorTests.csproj",
       "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-      "outputPath": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulatorTests\\obj\\",
+      "outputPath": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulatorTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1799,8 +1799,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj": {
-              "projectPath": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj"
+            "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj": {
+              "projectPath": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj"
             }
           }
         }

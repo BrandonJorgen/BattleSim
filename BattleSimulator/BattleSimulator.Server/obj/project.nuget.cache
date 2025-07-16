@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BBMK/mSgILY=",
+  "dgSpecHash": "ZcWOhaiY/Ug=",
   "success": true,
-  "projectFilePath": "I:\\NDA\\Tektonux\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj",
+  "projectFilePath": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brand\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
     "C:\\Users\\brand\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\9.0.7\\microsoft.aspnetcore.spaproxy.9.0.7.nupkg.sha512",
