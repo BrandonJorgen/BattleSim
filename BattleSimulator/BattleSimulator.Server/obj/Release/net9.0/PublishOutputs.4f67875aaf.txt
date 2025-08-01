@@ -1,6 +1,7 @@
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.exe
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\appsettings.Development.json
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\appsettings.json
+I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\Transformers\Transformers.json
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.dll
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.deps.json
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Release\net9.0\PubTmp\Out\TransformerBattleSimulator.Server.runtimeconfig.json

@@ -174,13 +174,13 @@ function App() {
             </select>
             <div className="master-grid">
                 <div className="battler-grid-left">
-                    {Array(battleModeNumber + 1).fill(0).map((any, i) => ( 
+                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
                         <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(i, event)} value={battlersValues[i]}>
                             <option key={i} value="Select your Battler">Select your Battler</option>
                             {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
                         </select>
                     ))}
-                    {Array(battleModeNumber + 1).fill(0).map((any, i) => (
+                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => (
                         <div key={i} className="align">
                             {usableBattlers[battlersIndexes[i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[i]].name} faction={usableBattlers[battlersIndexes[i]].faction} winloss={usableBattlers[battlersIndexes[i]].win + "-" + usableBattlers[battlersIndexes[i]].loss} image={usableBattlers[battlersIndexes[i]].image} battlerClassName={"left align"}></Battler>) : <img key={i} className="default-img left-one" src=".\Images\transformericon.jpg"></img>}
                         </div>
@@ -190,14 +190,14 @@ function App() {
                 <b className='versus-text'>VS</b>
 
                 <div className="battler-grid-right">
-                    {Array(battleModeNumber + 1).fill(0).map((any, i) => ( 
+                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
                         <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(battleModeNumber + 1 + i, event)} value={battlersValues[battleModeNumber + 1 + i]}>
                             <option key={i}>Select your Battler</option>
                             {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
                         </select>
                     ))}
-                    {Array(battleModeNumber + 1).fill(0).map((any, i) => ( 
-                        <div key={i} className="default-img align">
+                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
+                        <div key={i} className="align">
                             {usableBattlers[battlersIndexes[battleModeNumber + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].image} battlerClassName={"right"}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
                         </div>
                     ))}
