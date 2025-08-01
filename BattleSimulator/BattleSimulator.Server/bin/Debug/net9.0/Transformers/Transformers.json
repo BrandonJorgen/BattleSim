@@ -1,0 +1,58 @@
+[
+    {
+        "Name": "Megatron",
+        "Faction": "Decepticon",
+        "Image": "./Images/Megatron_(Decepticon).jpg",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Optimus Prime",
+        "Faction": "Autobot",
+        "Image": "./Images/Optimus.jpg",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Bumblebee",
+        "Faction": "Autobot",
+        "Image": "./Images/bumblebee.jpg",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Starscream",
+        "Faction": "Decepticon",
+        "Image": "./Images/starscream.jpg",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Inferno",
+        "Faction": "Autobot",
+        "Image": "./Images/Inferno.png",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Soundwave",
+        "Faction": "Decepticon",
+        "Image": "./Images/soundwave.png",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Sideswipe",
+        "Faction": "Autobot",
+        "Image": "./Images/sideswipe.png",
+        "Win": 0,
+        "Loss": 0
+    },
+    {
+        "Name": "Ironhide",
+        "Faction": "Autobot",
+        "Image": "./Images/Ironhide.png",
+        "Win": 0,
+        "Loss": 0
+    }
+]

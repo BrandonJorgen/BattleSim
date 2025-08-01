@@ -361,3 +361,4 @@ I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulatorTests\obj\Debug\net9.0\
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulatorTests\obj\Debug\net9.0\TransformerBattleSimulatorTests.pdb
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulatorTests\obj\Debug\net9.0\TransformerBattleSimulatorTests.genruntimeconfig.cache
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulatorTests\obj\Debug\net9.0\ref\TransformerBattleSimulatorTests.dll
+I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulatorTests\bin\Debug\net9.0\Transformers\Transformers.json

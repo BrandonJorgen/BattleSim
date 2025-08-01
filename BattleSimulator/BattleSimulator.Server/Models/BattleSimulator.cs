@@ -8,50 +8,50 @@ namespace TransformerBattleSimulator.Server.Models
 
         public string LastResult { get; set; }
 
-        public ITransformer[] Battle1v1(ITransformer battlerOne, ITransformer battlerTwo)
+        public ITransformer[] Battle(int mode, ITransformer[] battlers)
         {
 
             DecideWinner();
+            
+            List<ITransformer> leftArray = new List<ITransformer>();
+            List<string> leftTeamNames = new List<string>();
+            List<ITransformer> rightArray = new List<ITransformer>();
+            List<string> rightTeamNames = new List<string>();
+            List<ITransformer> winnerArray;
+            List<ITransformer> loserArray;
 
+            //Sort lists into teams
+            for (int i = 0; i <= mode; i++)
+            {
+                leftArray.Add(battlers[i]);
+                leftTeamNames.Add(leftArray[i].Name);
+                Console.WriteLine(string.Concat(leftTeamNames));
+            }
+
+            for (int i = 0; i <= mode; i++)
+            {
+                rightArray.Add(battlers[mode + i + 1]);
+                rightTeamNames.Add(rightArray[i].Name);
+            }
+
+            //Assign win/lose status
             if (Winner == "left")
             {
-                ChangeWinnerStats(battlerOne);
-                ChangeLoserStats(battlerTwo);
-                LastResult = battlerOne.Name + " is the winner in the fight between " + battlerOne.Name + " and " + battlerTwo.Name;
+                winnerArray = leftArray;
+                loserArray = rightArray;
+                LastResult = "Left team is the winner!";
             }
             else
             {
-                ChangeWinnerStats(battlerTwo);
-                ChangeLoserStats(battlerOne);
-                LastResult = battlerTwo.Name + " is the winner in the fight between " + battlerOne.Name + " and " + battlerTwo.Name;
+                winnerArray = rightArray;
+                loserArray = leftArray;
+                LastResult = "Right team is the winner!";
             }
 
-            return [battlerOne, battlerTwo];
-        }
+            ChangeWinnerStats(winnerArray.ToArray());
+            ChangeLoserStats(loserArray.ToArray());
 
-        public ITransformer[] Battle2v2(ITransformer battlerOne, ITransformer battlerTwo, ITransformer battlerThree, ITransformer battlerFour)
-        {
-
-            DecideWinner();
-
-            if (Winner == "left")
-            {
-                ChangeWinnerStats(battlerOne);
-                ChangeWinnerStats(battlerTwo);
-                ChangeLoserStats(battlerThree);
-                ChangeLoserStats(battlerFour);
-                LastResult = battlerOne.Name + " and " + battlerTwo.Name + " are the winners in the fight between " + battlerOne.Name + " and " + battlerTwo.Name + " vs " + battlerThree.Name + " and " + battlerFour.Name;
-            }
-            else
-            {
-                ChangeWinnerStats(battlerThree);
-                ChangeWinnerStats(battlerFour);
-                ChangeLoserStats(battlerOne);
-                ChangeLoserStats(battlerTwo);
-                LastResult = battlerThree.Name + " and " + battlerFour.Name + " are the winners in the fight between " + battlerOne.Name + " and " + battlerTwo.Name + " vs " + battlerThree.Name + " and " + battlerFour.Name;
-            }
-
-            return [battlerOne, battlerTwo, battlerThree, battlerFour];
+            return battlers;
         }
 
         private void DecideWinner()
@@ -68,18 +68,24 @@ namespace TransformerBattleSimulator.Server.Models
             }
         }
 
-        public ITransformer ChangeWinnerStats (ITransformer winner)
+        public ITransformer[] ChangeWinnerStats (ITransformer[] winners)
         {
-            winner.Win++;
+            foreach (ITransformer winner in winners)
+            {
+                winner.Win++;
+            }
 
-            return winner;
+            return winners;
         }
 
-        public ITransformer ChangeLoserStats (ITransformer loser)
+        public ITransformer[] ChangeLoserStats (ITransformer[] losers)
         {
-            loser.Loss++;
+            foreach (ITransformer loser in losers)
+            {
+                loser.Loss++;
+            }
 
-            return loser;
+            return losers;
         }
     }
 }

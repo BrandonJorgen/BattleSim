@@ -11,13 +11,15 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer battlerOne = new Transformer();
-            ITransformer battlerTwo = new Transformer();
-            ITransformer[] battlers = BattleSim.Battle1v1(battlerOne, battlerTwo);
+            ITransformer[] battlers = [new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(0, battlers);
 
-            if (battlerOne == dummyBot || battlerTwo == dummyBot)  
+            foreach (ITransformer battler in battlers)  
             {
-                Assert.Fail();
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
             }
         }
 
@@ -26,42 +28,95 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer battlerOne = new Transformer();
-            ITransformer battlerTwo = new Transformer();
-            ITransformer battlerThree = new Transformer();
-            ITransformer battlerFour = new Transformer();
-            ITransformer[] battlers = BattleSim.Battle2v2(battlerOne, battlerTwo, battlerThree, battlerFour);
+            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(1, battlers);
 
-            if (battlerOne == dummyBot || battlerTwo == dummyBot || battlerThree == dummyBot || battlerFour == dummyBot)
+            foreach (ITransformer battler in battlers)
             {
-                Assert.Fail();
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
             }
+            
+        }
+
+        [TestMethod]
+        public void Battle3v3Test()
+        {
+            BattleSimulator BattleSim = new();
+            ITransformer dummyBot = new Transformer();
+            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(2, battlers);
+
+            foreach (ITransformer battler in battlers)
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
+        }
+
+        [TestMethod]
+        public void Battle4v4Test()
+        {
+            BattleSimulator BattleSim = new();
+            ITransformer dummyBot = new Transformer();
+            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(2, battlers);
+
+            foreach (ITransformer battler in battlers)
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
         }
 
         [TestMethod]
         public void ChangeWinnerStatsTest()
         {
             BattleSimulator BattleSim = new();
-            ITransformer Battler = new Transformer();
-            ITransformer PreStatChange = new Transformer();
-            PreStatChange.Win = Battler.Win;
-            ITransformer PostStatChange = new Transformer();
-            PostStatChange = BattleSim.ChangeWinnerStats(Battler);
+            ITransformer[] battlers = [new Transformer(), new Transformer()];
+            ITransformer[] PreStatChange = [new Transformer(), new Transformer()];
+
+            for (int i = 0; i <= battlers.Length - 1; i++)
+            {
+                PreStatChange[i].Win = battlers[i].Win;
+            }
             
-            Assert.AreNotEqual(PreStatChange.Win, PostStatChange.Win);
+            ITransformer[] PostStatChange = [new Transformer(), new Transformer()];
+            PostStatChange = BattleSim.ChangeWinnerStats(battlers);
+
+            for (int i = 0; i < battlers.Length - 1; ++i)
+            {
+                Assert.AreNotEqual(PreStatChange[i].Win, PostStatChange[i].Win);
+            }
         }
 
         [TestMethod]
         public void ChangeLoserStatsTest()
         {
             BattleSimulator BattleSim = new();
-            ITransformer Battler = new Transformer();
-            ITransformer PreStatChange = new Transformer();
-            PreStatChange.Loss = Battler.Loss;
-            ITransformer PostStatChange = new Transformer();
-            PostStatChange = BattleSim.ChangeLoserStats(Battler);
+            ITransformer[] battlers = [new Transformer(), new Transformer()];
+            ITransformer[] PreStatChange = [new Transformer(), new Transformer()];
 
-            Assert.AreNotEqual(PreStatChange.Loss, PostStatChange.Loss);
+            for (int i = 0; i <= battlers.Length - 1; i++)
+            {
+                PreStatChange[i].Loss = battlers[i].Loss;
+            }
+
+            ITransformer[] PostStatChange = [new Transformer(), new Transformer()];
+            PostStatChange = BattleSim.ChangeLoserStats(battlers);
+
+            for (int i = 0; i < battlers.Length - 1; ++i)
+            {
+                Assert.AreNotEqual(PreStatChange[i].Loss, PostStatChange[i].Loss);
+            }
         }
     }
 }

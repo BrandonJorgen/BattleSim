@@ -1,4 +1,5 @@
-﻿using TransformerBattleSimulator.Server.Interfaces;
+﻿using System.Text.Json;
+using TransformerBattleSimulator.Server.Interfaces;
 
 namespace TransformerBattleSimulator.Server.Models
 {
@@ -8,11 +9,20 @@ namespace TransformerBattleSimulator.Server.Models
         public ITransformer[] SelectedBattlers { get; set; }
         public string BattleResults { get; set; }
 
+        public Transformer[] ReadTransformerFile(string file)
+        {
+            string json = File.ReadAllText(file);
+
+            Transformer[]? transformers = JsonSerializer.Deserialize<Transformer[]>(json);
+
+            return transformers;
+        }
+
         public void UpdateBattlerList(ITransformer[] battlers)
         {
             for (int i = 0; i <= battlers.Length - 1; i++)
             {
-                for (int o = 0; i <= Battlers.Length - 1; o++)
+                for (int o = 0; o <= Battlers.Length - 1; o++)
                 {
                     if (battlers[i].Name == Battlers[o].Name)
                     {

@@ -71,3 +71,4 @@ I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Debug\net9.
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Debug\net9.0\TransformerBattleSimulator.Server.pdb
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Debug\net9.0\TransformerBattleSimulator.Server.genruntimeconfig.cache
 I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\obj\Debug\net9.0\ref\TransformerBattleSimulator.Server.dll
+I:\NDA\Tektonux\BattleSim\BattleSimulator\BattleSimulator.Server\bin\Debug\net9.0\Transformers\Transformers.json

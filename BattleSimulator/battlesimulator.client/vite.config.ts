@@ -51,27 +51,11 @@ export default defineConfig({
                 target,
                 secure: false
             },
-            '^/battlesimulator/UpdateBattlerOne': {
+            '^/battlesimulator/UpdateBattlers': {
                 target,
                 secure: false
             },
-            '^/battlesimulator/UpdateBattlerTwo': {
-                target,
-                secure: false
-            },
-            '^/battlesimulator/UpdateBattlerThree': {
-                target,
-                secure: false
-            },
-            '^/battlesimulator/UpdateBattlerFour': {
-                target,
-                secure: false
-            },
-            '^/battlesimulator/Battle1v1': {
-                target,
-                secure: false
-            },
-            '^/battlesimulator/Battle2v2': {
+            '^/battlesimulator/Battle': {
                 target,
                 secure: false
             },
