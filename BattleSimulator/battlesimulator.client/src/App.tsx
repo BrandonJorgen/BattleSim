@@ -101,6 +101,7 @@ function App() {
         }
     }
 
+    //wait for selected battlers state so we can send the data to the back end
     useEffect(() => {
         if (selectedBattlers != null) {
             UpdateBattlersChoice();
