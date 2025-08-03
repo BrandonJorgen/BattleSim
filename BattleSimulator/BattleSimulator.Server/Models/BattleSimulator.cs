@@ -1,4 +1,5 @@
-﻿using TransformerBattleSimulator.Server.Interfaces;
+﻿using System.Reflection;
+using TransformerBattleSimulator.Server.Interfaces;
 
 namespace TransformerBattleSimulator.Server.Models
 {
@@ -14,9 +15,7 @@ namespace TransformerBattleSimulator.Server.Models
             DecideWinner();
             
             List<ITransformer> leftArray = new List<ITransformer>();
-            List<string> leftTeamNames = new List<string>();
             List<ITransformer> rightArray = new List<ITransformer>();
-            List<string> rightTeamNames = new List<string>();
             List<ITransformer> winnerArray;
             List<ITransformer> loserArray;
 
@@ -24,14 +23,7 @@ namespace TransformerBattleSimulator.Server.Models
             for (int i = 0; i <= mode; i++)
             {
                 leftArray.Add(battlers[i]);
-                leftTeamNames.Add(leftArray[i].Name);
-                Console.WriteLine(string.Concat(leftTeamNames));
-            }
-
-            for (int i = 0; i <= mode; i++)
-            {
                 rightArray.Add(battlers[mode + i + 1]);
-                rightTeamNames.Add(rightArray[i].Name);
             }
 
             //Assign win/lose status
@@ -72,6 +64,9 @@ namespace TransformerBattleSimulator.Server.Models
         {
             foreach (ITransformer winner in winners)
             {
+                if (winner == null || winner == new Transformer())
+                    return winners;
+                    
                 winner.Win++;
             }
 
@@ -82,6 +77,9 @@ namespace TransformerBattleSimulator.Server.Models
         {
             foreach (ITransformer loser in losers)
             {
+                if (loser == null || loser == new Transformer())
+                    return losers;
+                    
                 loser.Loss++;
             }
 

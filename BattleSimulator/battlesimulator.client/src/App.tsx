@@ -8,16 +8,15 @@ interface IBattler {
     win: number,
     loss: number,
     image: string,
-    classname: string,
 }
 
 function App() {
     const [battlers, setBattlers] = useState([])
     const [usableBattlers] = useState<IBattler[]>([])
     const [selectedBattlers, setSelectedBattlers] = useState([])
-    let values = ["Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler"]
+    let values = ["Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler"]
     const [battlersValues, setBattlersValues] = useState(values)
-    let indexes = [-1, -1, -1, -1]
+    let indexes = [-1, -1, -1, -1, -1, -1, -1, -1]
     const [battlersIndexes, setBattlersIndexes] = useState(indexes)
     const [statusText, setStatusText] = useState('Choose your battlers!')
     const [battleType, setBattleType] = useState("1v1")
@@ -35,13 +34,12 @@ function App() {
             setBattlers(data);
             for (let i = 0; i <= data.length - 1; i++) {
                 if (usableBattlers.length != data.length) {
-                    const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "", classname: "" };
+                    const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "" };
                     tempItem.name = data[i].name;
                     tempItem.faction = data[i].faction;
                     tempItem.win = data[i].win;
                     tempItem.loss = data[i].loss;
                     tempItem.image = data[i].image;
-                    tempItem.classname = data[i].battlerClassName;
                     usableBattlers.push(tempItem);
                 }
             }
@@ -80,6 +78,7 @@ function App() {
         values = battlersValues;
         values[slot] = event.target.value;
         setBattlersValues(values);
+        const tempSelectedBattlers = [...selectedBattlers];
 
         if (event.target.value == "Select your Battler") {
             ResetBattlerSlot(slot);
@@ -87,7 +86,6 @@ function App() {
             indexes[slot] = -1;
             setBattlersIndexes(indexes);
             setBattlersValues(values);
-            const tempSelectedBattlers = [...selectedBattlers];
             tempSelectedBattlers[slot] = battlers[-1];
             setSelectedBattlers(tempSelectedBattlers);
         } else {
@@ -96,7 +94,6 @@ function App() {
                     indexes = battlersIndexes;
                     indexes[slot] = i;
                     setBattlersIndexes(indexes);
-                    const tempSelectedBattlers = [...selectedBattlers];
                     tempSelectedBattlers[slot] = battlers[i];
                     setSelectedBattlers(tempSelectedBattlers);
                 }
@@ -142,17 +139,34 @@ function App() {
             setBattlers(data);
 
             for (let i = 0; i <= data.length - 1; i++) {
-                const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "", classname: "" };
+                const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "" };
                 tempItem.name = data[i].name;
                 tempItem.faction = data[i].faction;
                 tempItem.win = data[i].win;
                 tempItem.loss = data[i].loss;
                 tempItem.image = data[i].image;
-                tempItem.classname = data[i].battlerClassName;
                 usableBattlers[i] = tempItem;
             }
         }
     }
+
+    //Wait for battlers state so we can update the stats of the selected battlers
+    useEffect(() => {
+        const tempSelectedBattlers = [...selectedBattlers];
+
+        for (let i = 0; i <= selectedBattlers.length - 1; i++)
+        {
+            for (let o = 0; o <= battlers.length - 1; o++)
+            {
+                if (battlersIndexes[i] == o)
+                {
+                    tempSelectedBattlers[i] = battlers[o];
+                }
+            }
+        }
+
+        setSelectedBattlers(tempSelectedBattlers);
+    }, [battlers])
 
     async function ResetBattlerSlot(slot: number) {
         await fetch(`battlesimulator/ResetBattlerSlot`, {

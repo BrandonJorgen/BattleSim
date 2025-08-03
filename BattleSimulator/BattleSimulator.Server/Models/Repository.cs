@@ -22,14 +22,16 @@ namespace TransformerBattleSimulator.Server.Models
         {
             for (int i = 0; i <= battlers.Length - 1; i++)
             {
-                for (int o = 0; o <= Battlers.Length - 1; o++)
-                {
-                    if (battlers[i].Name == Battlers[o].Name)
+                if (battlers[i] != null)
+                    for (int o = 0; o <= Battlers.Length - 1; o++)
                     {
-                        Battlers[o] = battlers[i];
-                        break;
+                        if (Battlers[o] != null)
+                            if (battlers[i].Name == Battlers[o].Name)
+                            {
+                                Battlers[o] = battlers[i];
+                                break;
+                            }
                     }
-                }
             }
         }
 

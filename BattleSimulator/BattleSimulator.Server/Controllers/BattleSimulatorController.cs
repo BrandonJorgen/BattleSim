@@ -56,70 +56,22 @@ namespace TransformerBattleSimulator.Server.Controllers
         [HttpPost]
         public string Battle([FromBody] int mode)
         {
-            switch (mode)
+            if (repository.SelectedBattlers.Length - 1 >= mode)
             {
-                //1v1
-                case 0:
-                    for (int i = 0; i <= 1; i++)
+                for (int i = 0; i <= mode * 2 + 1; i++)
+                {
+                    if (repository.SelectedBattlers[i] == null || repository.SelectedBattlers[i].Name == " " || repository.SelectedBattlers[i] == new Transformer())
+                        return "ERROR: Please fill every battler slot.";
+
+                    for (int o = 0; o <= mode * 2 + 1; o++)
                     {
-                        if (repository.SelectedBattlers[i].Name == null) return "ERROR: Please choose two battlers before starting.";
+                        if (repository.SelectedBattlers[o] != null && repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o)
+                            return "ERROR: All battler slots must have a different Transformer!";
                     }
-
-                    if (repository.SelectedBattlers[0].Name == repository.SelectedBattlers[1].Name) return "ERROR: Please choose two DIFFERENT battlers before starting.";
-
-                    lastBattle = battleSim.Battle(0, repository.SelectedBattlers);
-                    break;
-
-                //2v2
-                case 1:
-                    for (int i = 0; i <= 3; i++)
-                    {
-                        if (repository.SelectedBattlers[i].Name == null) return "ERROR: Please choose four battlers before starting.";
-
-                        for (int o = 0; o <= 3; o++)
-                        {
-                            if (repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o) return "ERROR: Please choose four DIFFERENT battlers before starting.";
-                        }
-                    }
-
-                    lastBattle = battleSim.Battle(1, repository.SelectedBattlers);
-                    break;
-
-                //3v3
-                case 2:
-                    for (int i = 0; i <= 5; i++)
-                    {
-                        if (repository.SelectedBattlers[i].Name == null) return "ERROR: Please choose six battlers before starting.";
-
-                        for (int o = 0; o <= 5; o++)
-                        {
-                            if (repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o) return "ERROR: Please choose six DIFFERENT battlers before starting.";
-                        }
-                    }
-
-                    lastBattle = battleSim.Battle(2, repository.SelectedBattlers);
-                    break;
-
-                //4v4
-                case 3:
-                    for (int i = 0; i <= 7; i++)
-                    {
-                        if (repository.SelectedBattlers[i].Name == null) return "ERROR: Please choose eight battlers before starting.";
-
-                        for (int o = 0; o <= 7; o++)
-                        {
-                            if (repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o) return "ERROR: Please choose eight DIFFERENT battlers before starting.";
-                        }
-                    }
-
-                    lastBattle = battleSim.Battle(3, repository.SelectedBattlers);
-                    break;
-
-                default:
-                    Console.WriteLine("ERROR: NO CORRECT MODE SELECTED");
-                    repository.BattleResults = "ERROR: NO CORRECT MODE SELECTED";
-                    return repository.BattleResults;
+                }
             }
+
+            lastBattle = battleSim.Battle(mode, repository.SelectedBattlers);
 
             repository.UpdateBattlerList(lastBattle);
             repository.BattleResults = battleSim.LastResult;
