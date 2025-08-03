@@ -19,8 +19,7 @@ function App() {
     let indexes = [-1, -1, -1, -1, -1, -1, -1, -1]
     const [battlersIndexes, setBattlersIndexes] = useState(indexes)
     const [statusText, setStatusText] = useState('Choose your battlers!')
-    const [battleType, setBattleType] = useState("1v1")
-    const [battleModeNumber, setBattleModeNumber] = useState(0)
+    const [battleType, setBattleType] = useState(0)
 
 
     useEffect(() => {
@@ -47,31 +46,8 @@ function App() {
     }
 
     const HandleBattleTypeSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        if (event.target != null) setBattleType(event.target.value);
-    }
-
-    useEffect(() => {
-        UpdateBattleModeNumber();
-    }, [battleType]);
-
-    const UpdateBattleModeNumber = () => {
-        switch (battleType) {
-            case "1v1":
-                setBattleModeNumber(0)
-                break;
-            case "2v2":
-                setBattleModeNumber(1)
-                break;
-            case "3v3":
-                setBattleModeNumber(2)
-                break;
-            case "4v4":
-                setBattleModeNumber(3)
-                break;
-            default:
-                setBattleModeNumber(0)
-                break;
-        }
+        if (event.target != null)
+            setBattleType(Number(event.target.value));
     }
 
     const HandleSelectBattler = (slot: number, event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -129,7 +105,9 @@ function App() {
         if (response.ok) {
             const data = await response.text();
             setStatusText(data);
-            UpdateStats();
+
+            if (data[0] != "E")
+                UpdateStats();
         }
     }
 
@@ -183,20 +161,20 @@ function App() {
     return (
         <div>
             <select className="battle-select" onChange={HandleBattleTypeSelect}>
-                <option value="1v1">1v1</option>
-                <option value="2v2">2v2</option>
-                <option value="3v3">3v3</option>
-                <option value="4v4">4v4</option>
+                <option value={0}>1v1</option>
+                <option value={1}>2v2</option>
+                <option value={2}>3v3</option>
+                <option value={3}>4v4</option>
             </select>
             <div className="master-grid">
                 <div className="battler-grid-left">
-                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
+                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
                         <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(i, event)} value={battlersValues[i]}>
                             <option key={i} value="Select your Battler">Select your Battler</option>
                             {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
                         </select>
                     ))}
-                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => (
+                    {Array(battleType + 1).fill(0).map((_any, i) => (
                         <div key={i} className="align">
                             {usableBattlers[battlersIndexes[i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[i]].name} faction={usableBattlers[battlersIndexes[i]].faction} winloss={usableBattlers[battlersIndexes[i]].win + "-" + usableBattlers[battlersIndexes[i]].loss} image={usableBattlers[battlersIndexes[i]].image} battlerClassName={""}></Battler>) : <img key={i} className="default-img left-one" src=".\Images\transformericon.jpg"></img>}
                         </div>
@@ -206,19 +184,19 @@ function App() {
                 <b className='versus-text'>VS</b>
 
                 <div className="battler-grid-right">
-                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
-                        <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(battleModeNumber + 1 + i, event)} value={battlersValues[battleModeNumber + 1 + i]}>
+                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
+                        <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(battleType + 1 + i, event)} value={battlersValues[battleType + 1 + i]}>
                             <option key={i}>Select your Battler</option>
                             {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
                         </select>
                     ))}
-                    {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
+                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
                         <div key={i} className="align">
-                            {usableBattlers[battlersIndexes[battleModeNumber + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].image} battlerClassName={""}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
+                            {usableBattlers[battlersIndexes[battleType + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleType + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleType + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleType + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleType + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleType + 1 + i]].image} battlerClassName={""}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
                         </div>
                     ))}
                 </div>
-                <button className="fight-button" onClick={() => StartBattle(battleModeNumber)}>FIGHT</button>
+                <button className="fight-button" onClick={() => StartBattle(battleType)}>FIGHT</button>
                 <i className="status-text">{statusText}</i>
             </div>
         </div>

@@ -114,8 +114,7 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Battler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T20:25:25.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T20:25:25.118Z"
             },
             {
               "$type": "Document",
@@ -233,7 +232,7 @@
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
               "RelativeToolTip": "BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwEcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T20:51:00.626Z",
               "EditorCaption": ""
@@ -272,8 +271,7 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\BattleSimulator.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T00:11:01.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T00:11:01.052Z"
             },
             {
               "$type": "Document",
@@ -285,8 +283,7 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Repository.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAIwCsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T00:57:30.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T00:57:30.972Z"
             }
           ]
         }

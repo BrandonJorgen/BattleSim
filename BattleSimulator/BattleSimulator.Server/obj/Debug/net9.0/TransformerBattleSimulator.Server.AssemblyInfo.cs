@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransformerBattleSimulator.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+345d8dbf06ccec0f60d1d19f3b0de0edce236724")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41e64640f329c3a73bf5bf66563797762c1f0a13")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransformerBattleSimulator.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransformerBattleSimulator.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
