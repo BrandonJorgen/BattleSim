@@ -15,6 +15,8 @@ namespace TransformerBattleSimulator.Server.Controllers
         private static readonly Repository repository = new();
         private static readonly BattleSimulator battleSim = new();
 
+        private static Transformer newTransformer = new Transformer();
+
         public ITransformer[] lastBattle;
 
         private static void InitalizeRepo()
@@ -56,20 +58,16 @@ namespace TransformerBattleSimulator.Server.Controllers
         [HttpPost]
         public string Battle([FromBody] int mode)
         {
-            if (repository.SelectedBattlers.Length - 1 >= mode)
+            for (int i = 0; i <= mode * 2 + 1; i++)
             {
-                Console.WriteLine("REPO LENGTH IS: " + repository.SelectedBattlers.Length);
 
-                for (int i = 0; i <= mode * 2 + 1; i++)
+                if (repository.SelectedBattlers[i] == null || repository.SelectedBattlers[i].Name == newTransformer.Name)
+                    return "ERROR: Please fill every battler slot.";
+
+                for (int o = 0; o <= mode * 2 + 1; o++)
                 {
-                    if (repository.SelectedBattlers[i] == null || repository.SelectedBattlers[i].Name == " " || repository.SelectedBattlers[i] == new Transformer())
-                        return "ERROR: Please fill every battler slot.";
-
-                    for (int o = 0; o <= mode * 2 + 1; o++)
-                    {
-                        if ((repository.SelectedBattlers[o] != null || repository.SelectedBattlers[o].Name == " " || repository.SelectedBattlers[o] == new Transformer()) && repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o)
-                            return "ERROR: All battler slots must have a different Transformer!";
-                    }
+                    if ((repository.SelectedBattlers[o] == null || repository.SelectedBattlers[o].Name == newTransformer.Name) || (repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o))
+                        return "ERROR: All battler slots must have a different Transformer!";
                 }
             }
 
