@@ -56,33 +56,9 @@ th, td {
     grid-column: span 3;
 }
 
-.battler {
-    grid-row: 2;
-}
-
-.right{
-    grid-column: 3;
-}
-
 .default-img {
     height: 250px;
     width: 150px;
-}
-
-.left-one{
-    grid-column: 1;
-}
-
-.left-two{
-    grid-column: 2;
-}
-
-.right-one{
-    grid-column: 4;
-}
-
-.right-two{
-    grid-column: 5;
 }
 
 .versus-text{

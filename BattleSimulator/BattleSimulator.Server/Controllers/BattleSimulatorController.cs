@@ -58,6 +58,8 @@ namespace TransformerBattleSimulator.Server.Controllers
         {
             if (repository.SelectedBattlers.Length - 1 >= mode)
             {
+                Console.WriteLine("REPO LENGTH IS: " + repository.SelectedBattlers.Length);
+
                 for (int i = 0; i <= mode * 2 + 1; i++)
                 {
                     if (repository.SelectedBattlers[i] == null || repository.SelectedBattlers[i].Name == " " || repository.SelectedBattlers[i] == new Transformer())
@@ -65,7 +67,7 @@ namespace TransformerBattleSimulator.Server.Controllers
 
                     for (int o = 0; o <= mode * 2 + 1; o++)
                     {
-                        if (repository.SelectedBattlers[o] != null && repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o)
+                        if ((repository.SelectedBattlers[o] != null || repository.SelectedBattlers[o].Name == " " || repository.SelectedBattlers[o] == new Transformer()) && repository.SelectedBattlers[i].Name == repository.SelectedBattlers[o].Name && i != o)
                             return "ERROR: All battler slots must have a different Transformer!";
                     }
                 }

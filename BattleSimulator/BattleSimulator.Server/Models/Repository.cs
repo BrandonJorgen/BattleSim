@@ -42,6 +42,7 @@ namespace TransformerBattleSimulator.Server.Models
 
         public void ResetSlot(int slot)
         {
+            Console.WriteLine("HI FROM REPO, RESET GOT CALLED /shrug");
             SelectedBattlers[slot] = new Transformer();
         }
     }

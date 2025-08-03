@@ -153,20 +153,21 @@ function App() {
 
     //Wait for battlers state so we can update the stats of the selected battlers
     useEffect(() => {
-        const tempSelectedBattlers = [...selectedBattlers];
-
-        for (let i = 0; i <= selectedBattlers.length - 1; i++)
+        if (selectedBattlers.length > 0)
         {
-            for (let o = 0; o <= battlers.length - 1; o++)
-            {
-                if (battlersIndexes[i] == o)
-                {
-                    tempSelectedBattlers[i] = battlers[o];
+            const tempSelectedBattlers = [...selectedBattlers];
+
+            for (let i = 0; i <= selectedBattlers.length - 1; i++) {
+                for (let o = 0; o <= battlers.length - 1; o++) {
+                    if (battlersIndexes[i] == o) {
+                        tempSelectedBattlers[i] = battlers[o];
+                    }
                 }
             }
-        }
 
-        setSelectedBattlers(tempSelectedBattlers);
+            setSelectedBattlers(tempSelectedBattlers);
+        }
+        
     }, [battlers])
 
     async function ResetBattlerSlot(slot: number) {
@@ -197,7 +198,7 @@ function App() {
                     ))}
                     {Array(battleModeNumber + 1).fill(0).map((_any, i) => (
                         <div key={i} className="align">
-                            {usableBattlers[battlersIndexes[i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[i]].name} faction={usableBattlers[battlersIndexes[i]].faction} winloss={usableBattlers[battlersIndexes[i]].win + "-" + usableBattlers[battlersIndexes[i]].loss} image={usableBattlers[battlersIndexes[i]].image} battlerClassName={"left align"}></Battler>) : <img key={i} className="default-img left-one" src=".\Images\transformericon.jpg"></img>}
+                            {usableBattlers[battlersIndexes[i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[i]].name} faction={usableBattlers[battlersIndexes[i]].faction} winloss={usableBattlers[battlersIndexes[i]].win + "-" + usableBattlers[battlersIndexes[i]].loss} image={usableBattlers[battlersIndexes[i]].image} battlerClassName={""}></Battler>) : <img key={i} className="default-img left-one" src=".\Images\transformericon.jpg"></img>}
                         </div>
                     ))}
                 </div>   
@@ -213,7 +214,7 @@ function App() {
                     ))}
                     {Array(battleModeNumber + 1).fill(0).map((_any, i) => ( 
                         <div key={i} className="align">
-                            {usableBattlers[battlersIndexes[battleModeNumber + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].image} battlerClassName={"right"}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
+                            {usableBattlers[battlersIndexes[battleModeNumber + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleModeNumber + 1 + i]].image} battlerClassName={""}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
                         </div>
                     ))}
                 </div>

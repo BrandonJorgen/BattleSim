@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|solutionrelative:battlesimulator.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.server\\controllers\\battlesimulatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|solutionrelative:battlesimulator.server\\controllers\\battlesimulatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +23,18 @@
       "RelativeMoniker": "D:0:0:{8CADBE8A-FB5B-4B2B-9FE6-36B6EC3E1152}|BattleSimulatorTests\\TransformerBattleSimulatorTests.csproj|solutionrelative:battlesimulatortests\\battletests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.server\\models\\battler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|solutionrelative:battlesimulator.server\\models\\battler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\src\\components\\battler.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|solutionrelative:battlesimulator.client\\src\\components\\battler.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|solutionrelative:battlesimulator.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.server\\transformers\\transformers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|solutionrelative:battlesimulator.server\\transformers\\transformers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -43,16 +51,8 @@
       "RelativeMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|solutionrelative:battlesimulator.server\\interfaces\\ibattler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.server\\models\\battler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5A4EAC-BF13-4C60-9888-27A8C8B60097}|BattleSimulator.Server\\TransformerBattleSimulator.Server.csproj|solutionrelative:battlesimulator.server\\models\\battler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\src\\components\\battler.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|solutionrelative:battlesimulator.client\\src\\components\\battler.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\src\\components\\battler.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|solutionrelative:battlesimulator.client\\src\\components\\battler.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B5BF1FF-CCF7-F15D-0C9A-79F648B80FF3}|battlesimulator.client\\transformerbattlesimulator.client.esproj|i:\\nda\\tektonux\\battlesim\\battlesimulator\\battlesimulator.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -78,11 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Transformers.json",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Transformers\\Transformers.json",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Transformers\\Transformers.json",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "BattleTests.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulatorTests\\BattleTests.cs",
               "RelativeDocumentMoniker": "BattleSimulatorTests\\BattleTests.cs",
@@ -102,11 +102,12 @@
               "RelativeToolTip": "BattleSimulatorTests\\BattleTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T23:42:04.102Z"
+              "WhenOpened": "2025-07-13T23:42:04.102Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Battler.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\Battler.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Models\\Battler.cs",
@@ -114,11 +115,12 @@
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Battler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T20:25:25.118Z"
+              "WhenOpened": "2025-07-03T20:25:25.118Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "IBattler.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Interfaces\\IBattler.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Interfaces\\IBattler.cs",
@@ -130,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Battler.tsx",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\Components\\Battler.tsx",
               "RelativeDocumentMoniker": "battlesimulator.client\\src\\Components\\Battler.tsx",
@@ -142,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "Battler.css",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\Components\\Battler.css",
               "RelativeDocumentMoniker": "battlesimulator.client\\src\\Components\\Battler.css",
@@ -150,7 +152,8 @@
               "RelativeToolTip": "battlesimulator.client\\src\\Components\\Battler.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-04T22:54:22.859Z"
+              "WhenOpened": "2025-07-04T22:54:22.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -178,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ITransformer.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Interfaces\\ITransformer.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Interfaces\\ITransformer.cs",
@@ -190,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Transformer.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\Transformer.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Models\\Transformer.cs",
@@ -226,64 +229,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BattleSimulatorController.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
               "RelativeToolTip": "BattleSimulator.Server\\Controllers\\BattleSimulatorController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwFQAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDwAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T20:51:00.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "App.css",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\App.css",
               "RelativeDocumentMoniker": "battlesimulator.client\\src\\App.css",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\App.css",
               "RelativeToolTip": "battlesimulator.client\\src\\App.css",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-04T22:59:33.406Z"
+              "WhenOpened": "2025-07-04T22:59:33.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "App.tsx",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "battlesimulator.client\\src\\App.tsx",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\battlesimulator.client\\src\\App.tsx",
               "RelativeToolTip": "battlesimulator.client\\src\\App.tsx",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAYwKYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAYwMgAAABlAQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-06-30T00:02:06.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "BattleSimulator.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\BattleSimulator.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Models\\BattleSimulator.cs",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\BattleSimulator.cs",
               "RelativeToolTip": "BattleSimulator.Server\\Models\\BattleSimulator.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwBkAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T00:11:01.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Repository.cs",
               "DocumentMoniker": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\Repository.cs",
               "RelativeDocumentMoniker": "BattleSimulator.Server\\Models\\Repository.cs",
               "ToolTip": "I:\\NDA\\Tektonux\\BattleSim\\BattleSimulator\\BattleSimulator.Server\\Models\\Repository.cs",
               "RelativeToolTip": "BattleSimulator.Server\\Models\\Repository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwB4AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T00:57:30.972Z",
               "EditorCaption": ""
