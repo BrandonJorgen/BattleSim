@@ -1,0 +1,19 @@
+.team-grid {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    column-gap: 10px;
+}
+
+.battler-select {
+    height: 50px;
+    margin: auto;
+    grid-row: 1;
+    text-align: center;
+}
+
+.default-img {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 150px;
+    width: 150px;
+}

@@ -9,41 +9,33 @@ namespace TransformerBattleSimulator.Server.Models
 
         public string LastResult { get; set; }
 
-        public ITransformer[] Battle(int mode, ITransformer[] battlers)
+        public ITransformer[] Battle(int mode, ITransformer[] leftTeam, ITransformer[] rightTeam)
         {
 
             DecideWinner();
             
-            List<ITransformer> leftArray = new List<ITransformer>();
-            List<ITransformer> rightArray = new List<ITransformer>();
             List<ITransformer> winnerArray;
             List<ITransformer> loserArray;
-
-            //Sort lists into teams
-            for (int i = 0; i <= mode; i++)
-            {
-                leftArray.Add(battlers[i]);
-                rightArray.Add(battlers[mode + i + 1]);
-            }
 
             //Assign win/lose status
             if (Winner == "left")
             {
-                winnerArray = leftArray;
-                loserArray = rightArray;
+                winnerArray = leftTeam.ToList();
+                loserArray = rightTeam.ToList();
                 LastResult = "Left team is the winner!";
             }
             else
             {
-                winnerArray = rightArray;
-                loserArray = leftArray;
+                winnerArray = rightTeam.ToList();
+                loserArray = leftTeam.ToList();
                 LastResult = "Right team is the winner!";
             }
 
             ChangeWinnerStats(winnerArray.ToArray());
             ChangeLoserStats(loserArray.ToArray());
+            ITransformer[] result = leftTeam.Concat(rightTeam).ToArray();
 
-            return battlers;
+            return result;
         }
 
         private void DecideWinner()

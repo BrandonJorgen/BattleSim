@@ -11,10 +11,19 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer[] battlers = [new Transformer(), new Transformer()];
-            ITransformer[] battle = BattleSim.Battle(0, battlers);
+            ITransformer[] LeftTeam = [new Transformer()];
+            ITransformer[] RightTeam = [new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(0, LeftTeam, RightTeam);
 
-            foreach (ITransformer battler in battlers)  
+            foreach (ITransformer battler in LeftTeam)  
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
+            foreach (ITransformer battler in RightTeam)
             {
                 if (battler == dummyBot)
                 {
@@ -28,17 +37,26 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer()];
-            ITransformer[] battle = BattleSim.Battle(1, battlers);
+            ITransformer[] LeftTeam = [new Transformer(), new Transformer()];
+            ITransformer[] RightTeam = [new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(1, LeftTeam, RightTeam);
 
-            foreach (ITransformer battler in battlers)
+            foreach (ITransformer battler in LeftTeam)
             {
                 if (battler == dummyBot)
                 {
                     Assert.Fail();
                 }
             }
-            
+
+            foreach (ITransformer battler in RightTeam)
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
         }
 
         [TestMethod]
@@ -46,10 +64,19 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
-            ITransformer[] battle = BattleSim.Battle(2, battlers);
+            ITransformer[] LeftTeam = [new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] RightTeam = [new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(2, LeftTeam, RightTeam);
 
-            foreach (ITransformer battler in battlers)
+            foreach (ITransformer battler in LeftTeam)
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
+            foreach (ITransformer battler in RightTeam)
             {
                 if (battler == dummyBot)
                 {
@@ -64,10 +91,19 @@ namespace TransformerBattleSimulatorTests
         {
             BattleSimulator BattleSim = new();
             ITransformer dummyBot = new Transformer();
-            ITransformer[] battlers = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
-            ITransformer[] battle = BattleSim.Battle(2, battlers);
+            ITransformer[] LeftTeam = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] RightTeam = [new Transformer(), new Transformer(), new Transformer(), new Transformer(), new Transformer()];
+            ITransformer[] battle = BattleSim.Battle(2, LeftTeam, RightTeam);
 
-            foreach (ITransformer battler in battlers)
+            foreach (ITransformer battler in LeftTeam)
+            {
+                if (battler == dummyBot)
+                {
+                    Assert.Fail();
+                }
+            }
+
+            foreach (ITransformer battler in RightTeam)
             {
                 if (battler == dummyBot)
                 {

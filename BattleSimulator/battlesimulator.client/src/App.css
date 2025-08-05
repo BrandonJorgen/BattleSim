@@ -1,5 +1,5 @@
 ﻿#root {
-    max-width: 1280px;
+    min-width: 500px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -10,71 +10,32 @@ th, td {
     padding-right: 1rem;
 }
 
-.master-grid{
+.master-grid {
     display: grid;
-    grid-template-rows: 3fr;
-    grid-template-columns: 3fr;
+    grid-template-rows: 55px 390px 2fr;
+    grid-template-columns: 1fr;
+    background: linear-gradient(90deg,rgba(190, 11, 36, 0) 0%, rgba(190, 11, 36, 1) 33%, rgba(135, 18, 182, 1) 66%, rgba(135, 18, 182, 0) 100%);
 }
 
-.battler-grid-left {
-    display: grid;
-    justify-items: center;
-    grid-template-rows: [row1-start] 50px [row1-end] 322px;
-    row-gap: 10px;
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.battler-grid-right {
-    display: grid;
-    justify-items: center;
-    grid-template-rows: [row1-start] 50px [row1-end] 322px;
-    row-gap: 10px;
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.battle-select {
+.battlemode-select {
     width: 100px;
     grid-row: 1;
-    grid-column: 2;
-}
-
-.battler-select {
-    height: 50px;
-    margin: auto;
-    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .fight-button {
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: center;
+    width: 150px;
 }
 
 .status-text {
-    grid-row: 3;
-    grid-column: span 3;
-}
-
-.default-img {
-    height: 250px;
-    width: 150px;
-}
-
-.versus-text{
-    grid-column: 2;
-    align-content: center;
-}
-
-.align {
-    align-self: center;
-}
-
-.default-img {
-    display: block;
-    align-self: center;
-    justify-self: center;
-    height: 150px;
-    width: 150px;
-    grid-row: 2;
+    grid-row: 4;
+    grid-column: 1;
+    text-decoration: underline;
+    font-size: 18px;
 }

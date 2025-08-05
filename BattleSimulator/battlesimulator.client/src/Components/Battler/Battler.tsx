@@ -2,16 +2,15 @@ import "./Battler.css"
 
 interface BattlerProps {
     name: string,
-    faction?: string,
+    faction: string,
     winloss: string,
     image: string,
-    battlerClassName: string,
 }
 
-export default function Battler({ name, faction, winloss, image, battlerClassName }: BattlerProps) {
+export default function Battler({ name, faction, winloss, image }: BattlerProps) {
 
     return (
-        <div className={'battler ' + battlerClassName}>
+        <div className={'battler'}>
             <img className="battler-img" src={image}></img>
             <b className="battler-name">{name}</b>
             <i className="battler-faction">{faction}</i>

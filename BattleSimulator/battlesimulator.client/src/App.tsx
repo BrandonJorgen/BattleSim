@@ -1,103 +1,22 @@
-import { useState, useEffect } from 'react'
-import Battler from './Components/Battler'
+import { useState } from 'react'
 import "./app.css"
+import BattlerGrid from './Components/BattlerGrid/BattlerGrid'
 
-interface IBattler {
-    name: string,
-    faction: string,
-    win: number,
-    loss: number,
-    image: string,
-}
 
 function App() {
-    const [battlers, setBattlers] = useState([])
-    const [usableBattlers] = useState<IBattler[]>([])
-    const [selectedBattlers, setSelectedBattlers] = useState([])
-    let values = ["Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler", "Select your Battler"]
-    const [battlersValues, setBattlersValues] = useState(values)
-    let indexes = [-1, -1, -1, -1, -1, -1, -1, -1]
-    const [battlersIndexes, setBattlersIndexes] = useState(indexes)
     const [statusText, setStatusText] = useState('Choose your battlers!')
     const [battleType, setBattleType] = useState(0)
-
-
-    useEffect(() => {
-        GetBattlers();
-    }, []);
-
-    async function GetBattlers() {
-        const response = await fetch('battlesimulator/GetBattlers');
-        if (response.ok) {
-            const data = await response.json();
-            setBattlers(data);
-            for (let i = 0; i <= data.length - 1; i++) {
-                if (usableBattlers.length != data.length) {
-                    const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "" };
-                    tempItem.name = data[i].name;
-                    tempItem.faction = data[i].faction;
-                    tempItem.win = data[i].win;
-                    tempItem.loss = data[i].loss;
-                    tempItem.image = data[i].image;
-                    usableBattlers.push(tempItem);
-                }
-            }
-        }
-    }
+    const [battleCount, setBattleCount] = useState(0)
 
     const HandleBattleTypeSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
         if (event.target != null)
             setBattleType(Number(event.target.value));
     }
 
-    const HandleSelectBattler = (slot: number, event: React.ChangeEvent<HTMLSelectElement>) => {
-        values = battlersValues;
-        values[slot] = event.target.value;
-        setBattlersValues(values);
-        const tempSelectedBattlers = [...selectedBattlers];
-
-        if (event.target.value == "Select your Battler") {
-            ResetBattlerSlot(slot);
-            indexes = battlersIndexes;
-            indexes[slot] = -1;
-            setBattlersIndexes(indexes);
-            setBattlersValues(values);
-            tempSelectedBattlers[slot] = battlers[-1];
-            setSelectedBattlers(tempSelectedBattlers);
-        } else {
-            for (let i = 0; i <= battlers.length - 1; i++) {
-                if (usableBattlers[i].name == event.target.value) {
-                    indexes = battlersIndexes;
-                    indexes[slot] = i;
-                    setBattlersIndexes(indexes);
-                    tempSelectedBattlers[slot] = battlers[i];
-                    setSelectedBattlers(tempSelectedBattlers);
-                }
-            }
-        }
-    }
-
-    //wait for selected battlers state so we can send the data to the back end
-    useEffect(() => {
-        if (selectedBattlers != null) {
-            UpdateBattlersChoice();
-        }
-    }, [selectedBattlers]);
-
-    async function UpdateBattlersChoice() {
-        await fetch(`battlesimulator/UpdateBattlers`, {
-            method: 'POST',
-            body: JSON.stringify(selectedBattlers),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-    }
-
     async function StartBattle(mode: number) {
         const response = await fetch('battlesimulator/Battle', {
             method: 'POST',
-            body: JSON.stringify( mode ),
+            body: JSON.stringify(mode),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -107,97 +26,22 @@ function App() {
             setStatusText(data);
 
             if (data[0] != "E")
-                UpdateStats();
+                setBattleCount(battleCount + 1);
         }
-    }
-
-    async function UpdateStats() {
-        const response = await fetch('battlesimulator/UpdateStats')
-        if (response.ok) {
-            const data = await response.json();
-            setBattlers(data);
-
-            for (let i = 0; i <= data.length - 1; i++) {
-                const tempItem = { name: "", faction: "", win: 0, loss: 0, image: "" };
-                tempItem.name = data[i].name;
-                tempItem.faction = data[i].faction;
-                tempItem.win = data[i].win;
-                tempItem.loss = data[i].loss;
-                tempItem.image = data[i].image;
-                usableBattlers[i] = tempItem;
-            }
-        }
-    }
-
-    //Wait for battlers state so we can update the stats of the selected battlers
-    useEffect(() => {
-        if (selectedBattlers.length > 0)
-        {
-            const tempSelectedBattlers = [...selectedBattlers];
-
-            for (let i = 0; i <= selectedBattlers.length - 1; i++) {
-                for (let o = 0; o <= battlers.length - 1; o++) {
-                    if (battlersIndexes[i] == o) {
-                        tempSelectedBattlers[i] = battlers[o];
-                    }
-                }
-            }
-
-            setSelectedBattlers(tempSelectedBattlers);
-        }
-        
-    }, [battlers])
-
-    async function ResetBattlerSlot(slot: number) {
-        await fetch(`battlesimulator/ResetBattlerSlot`, {
-            method: 'POST',
-            body: JSON.stringify( slot ),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
     }
 
     return (
         <div>
-            <select className="battle-select" onChange={HandleBattleTypeSelect}>
-                <option value={0}>1v1</option>
-                <option value={1}>2v2</option>
-                <option value={2}>3v3</option>
-                <option value={3}>4v4</option>
-            </select>
             <div className="master-grid">
-                <div className="battler-grid-left">
-                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
-                        <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(i, event)} value={battlersValues[i]}>
-                            <option key={i} value="Select your Battler">Select your Battler</option>
-                            {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
-                        </select>
-                    ))}
-                    {Array(battleType + 1).fill(0).map((_any, i) => (
-                        <div key={i} className="align">
-                            {usableBattlers[battlersIndexes[i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[i]].name} faction={usableBattlers[battlersIndexes[i]].faction} winloss={usableBattlers[battlersIndexes[i]].win + "-" + usableBattlers[battlersIndexes[i]].loss} image={usableBattlers[battlersIndexes[i]].image} battlerClassName={""}></Battler>) : <img key={i} className="default-img left-one" src=".\Images\transformericon.jpg"></img>}
-                        </div>
-                    ))}
-                </div>   
-
-                <b className='versus-text'>VS</b>
-
-                <div className="battler-grid-right">
-                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
-                        <select key={i} className="battler-select" onChange={(event) => HandleSelectBattler(battleType + 1 + i, event)} value={battlersValues[battleType + 1 + i]}>
-                            <option key={i}>Select your Battler</option>
-                            {usableBattlers.map((battler, i) => (<option key={i} value={battler.name}>{battler.name}</option>))}
-                        </select>
-                    ))}
-                    {Array(battleType + 1).fill(0).map((_any, i) => ( 
-                        <div key={i} className="align">
-                            {usableBattlers[battlersIndexes[battleType + 1 + i]] != null ? (<Battler key={i} name={usableBattlers[battlersIndexes[battleType + 1 + i]].name} faction={usableBattlers[battlersIndexes[battleType + 1 + i]].faction} winloss={usableBattlers[battlersIndexes[battleType + 1 + i]].win + "-" + usableBattlers[battlersIndexes[battleType + 1 + i]].loss} image={usableBattlers[battlersIndexes[battleType + 1 + i]].image} battlerClassName={""}></Battler>) : <img className="default-img right" src=".\Images\transformericon.jpg"></img>}
-                        </div>
-                    ))}
-                </div>
+                <select className="battlemode-select" onChange={HandleBattleTypeSelect}>
+                    <option value={0}>1v1</option>
+                    <option value={1}>2v2</option>
+                    <option value={2}>3v3</option>
+                    <option value={3}>4v4</option>
+                </select>
+                <BattlerGrid battleType={battleType} battleCount={battleCount} />
                 <button className="fight-button" onClick={() => StartBattle(battleType)}>FIGHT</button>
-                <i className="status-text">{statusText}</i>
+                <b className="status-text">{statusText}</b>
             </div>
         </div>
     );

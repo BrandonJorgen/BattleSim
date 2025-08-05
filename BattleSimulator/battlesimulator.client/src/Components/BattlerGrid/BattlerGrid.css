@@ -1,0 +1,18 @@
+.battler-grid 
+{
+    display: grid;
+    grid-template-rows: 392px;
+    grid-template-columns: 1fr 110px 1fr;
+    place-self: center;
+}
+
+.right
+{
+    grid-column: 3;
+}
+
+.versus-text {
+    grid-column: 2;
+    align-content: center;
+    font-size: 32px;
+}
